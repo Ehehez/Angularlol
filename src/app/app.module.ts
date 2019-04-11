@@ -17,7 +17,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     EmpresasListComponent,
     EmpresasEditComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
