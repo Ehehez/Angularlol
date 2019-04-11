@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-content>
     <button mat-raised-button color="accent" *ngIf="!isAuthenticated"
-            (click)="">Login
+            >Login
     </button>
     <button mat-raised-button color="accent" *ngIf="isAuthenticated"
             [routerLink]="['/empresas-list']">Lista de Empresas
