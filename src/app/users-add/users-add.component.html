@@ -1,0 +1,42 @@
+<mat-card>
+  <form #carForm="ngForm" (ngSubmit)="save(carForm.value)">
+    <mat-card-header>
+      <mat-card-title>
+        <h2>Editar/Añadir Usuario</h2>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <input type="hidden" name="id" [(ngModel)]="usuarios.id">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Email" [(ngModel)]="usuarios.email" required name="email" #email />
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+          <input matInput type="password" placeholder="Contraseña" [(ngModel)]="usuarios.pwd" required name="contraseña" #pwd />
+        </mat-form-field>
+        <br />
+      <mat-form-field>
+        <input matInput placeholder="Nombre" [(ngModel)]="usuarios.nombre" required name="nombre" #nombre />
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <input matInput placeholder="Apellidos" [(ngModel)]="usuarios.apellidos" required name="apellidos" #apellidos />
+      </mat-form-field>
+      <br />
+      <!-- <mat-form-field>
+        <mat-label>Empresa</mat-label>
+        <select matNativeControl name="empresaid" [(ngModel)]="usuarios.empresaid">
+          <option *ngFor="let e of empresas" [value]="e.id">
+            {{e.nombreEmpresa}}
+          </option>
+        </select>
+      </mat-form-field> -->
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!carForm.form.valid">Save</button>
+      <a mat-button routerLink="/empresas-list">Cancel</a>
+    </mat-card-actions>
+    <mat-card-footer>
+    </mat-card-footer>  
+  </form>
+</mat-card>

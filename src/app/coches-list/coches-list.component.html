@@ -1,3 +1,16 @@
-<p>
-  coches-list works!
-</p>
+<mat-card>
+  <mat-card-title>Lista de Empresas</mat-card-title>
+  <mat-card-content>
+    <h3><pre>Marca</pre> <pre>Modelo</pre>  <pre>Color</pre><pre>Empresa</pre> </h3>
+    <mat-list>
+      <mat-list-item *ngFor="let coche of coches">
+        <!--<img mat-list-avatar src="{{car.giphyUrl}}" alt="{{coche.modelo}}">-->
+        <h3 mat-line><pre>{{coche.marca}}</pre><pre>{{coche.modelo}}</pre><pre>{{coche.color}}</pre><pre>{{coche.empresa.nombreEmpresa}}</pre></h3>
+        <button mat-fab color="red" type="button" routerLink="/coches-edit/{{coche.id}}">Edit</button>
+        <button mat-fab color="red" type="button" (click)="delete(coche.id)">Delete</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+
+  <button mat-fab color="primary" [routerLink]="['/coches-add']">Add</button>
+</mat-card>

@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>Lista de Empresas</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let user of useremp">
+        <h3 mat-line>{{user.usuario.nombre}} || {{user.usuario.apellidos}} || {{user.empresa.nombreEmpresa}}
+        </h3>
+        <button mat-fab color="red" type="button" routerLink="/users-edit/{{user.id}}">Edit</button>
+        <button mat-fab color="red" type="button" (click)="delete(user.id)">Delete</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+
+  <button mat-fab color="primary" [routerLink]="['/asd']">Add</button>
+</mat-card>

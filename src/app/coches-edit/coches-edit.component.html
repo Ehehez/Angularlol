@@ -1,0 +1,31 @@
+<mat-card>
+  <form #carForm="ngForm" (ngSubmit)="save(carForm.value)">
+    <mat-card-header>
+      <mat-card-title>
+        <h2>Editar</h2>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <input type="hidden" name="id" [(ngModel)]="coches.id">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Marca" [(ngModel)]="coches.marca" required name="marca" #marca />
+
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Modelo" [(ngModel)]="coches.modelo" required name="modelo" #modelo />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Color" [(ngModel)]="coches.color" required name="color" #color />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!carForm.form.valid">Save</button>
+      <a mat-button routerLink="/empresas-list">Cancel</a>
+    </mat-card-actions>
+    <mat-card-footer>
+    </mat-card-footer>
+    
+    
+  </form>
+</mat-card>
+

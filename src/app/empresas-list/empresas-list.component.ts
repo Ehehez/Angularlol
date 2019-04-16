@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpresaService } from '../shared/empresa/empresa.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-empresas-list',

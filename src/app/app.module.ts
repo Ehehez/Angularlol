@@ -10,6 +10,12 @@ import { AppComponent } from './app.component';
 import { EmpresasListComponent } from './empresas-list/empresas-list.component';
 import { EmpresasEditComponent } from './empresas-edit/empresas-edit.component';
 import { HomeComponent } from './home/home.component';
+import { CochesListComponent } from './coches-list/coches-list.component';
+import { CochesEditComponent } from './coches-edit/coches-edit.component';
+import { CochesAddComponent } from './coches-add/coches-add.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { UsersAddComponent } from './users-add/users-add.component';
+import { UserempListComponent } from './useremp-list/useremp-list.component';
 
 
 @NgModule({
@@ -17,7 +23,13 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     EmpresasListComponent,
     EmpresasEditComponent,
-    HomeComponent
+    HomeComponent,
+    CochesListComponent,
+    CochesEditComponent,
+    CochesAddComponent,
+    UsersListComponent,
+    UsersAddComponent,
+    UserempListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +42,9 @@ import { HomeComponent } from './home/home.component';
     MatListModule,
     MatToolbarModule,
     FormsModule,
+  ],
+  entryComponents: [
+    UserempListComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
